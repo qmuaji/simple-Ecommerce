@@ -1,0 +1,4 @@
+$mysql_host 	= "mysql17.000webhost.com";
+$mysql_database = "a7964143_musik";
+$mysql_user 	= "a7964143_musik";
+$mysql_password = "risky123";
