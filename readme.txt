@@ -9,7 +9,7 @@ Risky Muaji Setya Prana
 Politeknik Sukabumi
 =================================
 
-login admin
+login admin www.ecommerce.com/admin
 --------------------
 username: admin
 password: admin
