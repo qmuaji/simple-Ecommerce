@@ -97,7 +97,7 @@ $no = $offset+1;?>
 					</td>
 					<td class='text-center'><small><?php echo $kat ?></small></td>
 					<td style='max-width: 90px'>
-						<img class="img-responsive" src="../Images/<?php echo $img ?>" alt="">
+						<img class="img-responsive" src="../images/<?php echo $img ?>" alt="">
 					</td>
 					<td class='text-center'><?php echo $stok ?></td>
 					<td class='text-center'>					
