@@ -1,5 +1,5 @@
-<html lang="en"><head>
-    <meta charset="utf-8">
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -69,12 +69,12 @@
               ?>
                 <li class="mega-menu-column">
                   <ul>
-                   <li class="nav-header"><h4> <?php echo $rows['nama'] ?></h4></li>
-                    <img src="images/<?php echo $rows['images_name'] ?>">
+                   <li class="nav-header"><h4> <?= $rows['nama'] ?></h4></li>
+                    <img src="images/<?= $rows['images_name'] ?>">
                     <?php 
                       while($row2 = mysql_fetch_array($kat)){
                         ?>                          
-                        <li><a href="index.php?f=produk_view&id=<?php echo $row2['kategoriID'] ?>"><?php echo $row2['kategori'] ?></a></li>
+                        <li><a href="index.php?f=produk_view&id=<?= $row2['kategoriID'] ?>"><?= $row2['kategori'] ?></a></li>
                         <?php 
                       }
                     ?>
@@ -110,7 +110,7 @@
               ?>
                     <li><a href="index.php?f=user_register"><i class="glyphicon glyphicon-pencil"></i> Login / Register</a></li>
               <?php }else{ ?>
-                    <li><a href="index.php?f=history&id=<?php echo $_SESSION['pelanggan'] ?>"><i class="glyphicon glyphicon-book"></i> Histori belanja</a></li>
+                    <li><a href="index.php?f=history&id=<?= $_SESSION['pelanggan'] ?>"><i class="glyphicon glyphicon-book"></i> Histori belanja</a></li>
                     <li class="divider"></li>
                     <li><a href="index.php?f=user_edit_form"><i class="glyphicon glyphicon-pencil"></i> Edit Account</a></li>
                     <li><a href="user_login_act.php?act=0"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
@@ -136,7 +136,7 @@
                 $subTotal = "0";
               }
             ?> -->
-            <li><a href="index.php?f=cart&act=none" title="Shopping Cart"><b class="glyphicon glyphicon-shopping-cart"></b><!--  <?php echo $item; ?> item(s) - Rp <?php echo number_format($subTotal,0,',','.'); ?> --></a></li>
+            <li><a href="index.php?f=cart&act=none" title="Shopping Cart"><b class="glyphicon glyphicon-shopping-cart"></b><!--  <?= $item; ?> item(s) - Rp <?= number_format($subTotal,0,',','.'); ?> --></a></li>
             <li><a href="index.php?f=alamat_kirim" title="Check Out"><span class="glyphicon glyphicon-share-alt"></span></a></li>
           </ul>
         </div>

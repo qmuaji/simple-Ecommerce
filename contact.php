@@ -32,15 +32,15 @@ if (isset($_SESSION['pelanggan'])) {
 
          
           <div class="form-group">
-            <label class="col-sm-2 control-label">Nama Anda</label>
+            <label class="col-sm-2 control-label">Nama</label>
             <div class="col-sm-10">
-              <input type="text" name="nama" class="form-control" value="<?php echo $nama ?>">
+              <input type="text" name="nama" class="form-control" value="<?= $nama ?>">
                           </div>
           </div>
           <div class="form-group">
             <label class="col-sm-2 control-label">E-Mail</label>
             <div class="col-sm-10">
-              <input type="text" name="email" class="form-control" value="<?php echo $email ?>">
+              <input type="text" name="email" class="form-control" value="<?= $email ?>">
                           </div>
           </div>
           <div class="form-group">
@@ -51,14 +51,14 @@ if (isset($_SESSION['pelanggan'])) {
           </div>
 
           <div class="form-group">
-            <label class="col-sm-2 control-label">Kode Captcha</label>
+            <label class="col-sm-2 control-label">Captcha</label>
             <div class="col-sm-10">
               <input type="text" name="code" class="form-control">
             </div>
           </div>
           <div class="form-group">
             <div class="col-sm-offset-3">
-                <img  src="captcha.php?rand=<?php echo rand(); ?>" id='captchaimg' > 
+                <img  src="captcha.php?rand=<?= rand(); ?>" id='captchaimg' > 
                 <a href='javascript: refreshCaptcha();'><i class="glyphicon glyphicon-refresh"></i></a> 
                 <script language='JavaScript' type='text/javascript'>
                   function refreshCaptcha()
@@ -91,11 +91,11 @@ if (isset($_SESSION['pelanggan'])) {
 
           while ($row = mysql_fetch_array($query)) {
             ?>
-           <b>From </b>: <?php echo $row['nama'] ?><br>
-           <small><?php echo $row['tanggal'] ?></small><br>
+           <b>From </b>: <?= $row['nama'] ?><br>
+           <small><?= $row['tanggal'] ?></small><br>
            
-           <p><?php echo $row['komentar'] ?></p>
-           <p>Email  <?php echo " : ". $row['email'] ?></p>
+           <p><?= $row['komentar'] ?></p>
+           <p>Email  <?= " : ". $row['email'] ?></p>
 
             <hr>
             <?php

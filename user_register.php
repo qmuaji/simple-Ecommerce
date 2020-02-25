@@ -1,6 +1,12 @@
+<?php 
+
+include('user_login_form.php');
+error_reporting(E_ALL ^ E_DEPRECATED)
+?>
+
 <div class="panel-heading" style="padding-top:0px; padding-bottom:0px;"><h3>Login / Register</h3></div>
 <div class="col-sm-4">	
-	<?php include('user_login_form.php') ?>
+	
 </div>
 
 <form action="user_register_act.php" method="post" id="inserts">
@@ -22,7 +28,7 @@
 				<div class="form-group col-sm-5">
 				<label>Jenis kelamin</label>
 					<select name="jk" class="form-control" required>
-						<?php getJK($row['jk']); ?>
+						<?php getJK($row['jk']) ?>
 					</select>
 				</div>
 
@@ -93,7 +99,7 @@
 				</div>					
 
 				<div class="col-sm-7">
-					<img  src="captcha.php?rand=<?php echo rand(); ?>" id='captchaimg' > 
+					<img  src="captcha.php?rand=<?= rand(); ?>" id='captchaimg' > 
 					<a href='javascript: refreshCaptcha();'><i class="glyphicon glyphicon-refresh"></i></a> 
 					<script language='JavaScript' type='text/javascript'>
 						function refreshCaptcha()

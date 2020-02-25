@@ -2,7 +2,7 @@
 
 if (isset($_GET['provinsi_id'])) {
 	
-	include('koneksi.php');
+	require_once('koneksi.php');
 	$provinsi_id	= $_GET['provinsi_id'];
 	echo "<select id='kabupaten'>";
 	echo "<option value='' >- Kota / Kabupaten -</option>";
@@ -14,7 +14,7 @@ if (isset($_GET['provinsi_id'])) {
     echo"</select>";
 
 }else{
-	include('admin/function.php');
+	require_once('admin/function.php');
 	getKokab($_SESSION['pelanggan_kokab']);
 }
 
